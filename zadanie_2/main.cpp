@@ -8,7 +8,7 @@ void check(const wstring& Text, const int & key)
 {
     wstring s=Text;
     try {
-        PerestanCipher skey(key);
+        AlphaCipher skey(key);
         wcout<<skey.CoderAlphaCipher(key, s)<<endl;
         wstring g=skey.CoderAlphaCipher(key, s);
         wcout<<skey.DecoderAlphaCipher(key,g)<<endl;
