@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <cctype>
-#include "PerestanCipher.h"
+#include "AlphaCipher.h"
 #include <locale>
 using namespace std;
 void check(const wstring& Text, const int & key)
@@ -9,9 +9,9 @@ void check(const wstring& Text, const int & key)
     wstring s=Text;
     try {
         PerestanCipher skey(key);
-        wcout<<skey.CoderPerestanCipher(key, s)<<endl;
-        wstring g=skey.CoderPerestanCipher(key, s);
-        wcout<<skey.DecoderPerestanCipher(key,g)<<endl;
+        wcout<<skey.CoderAlphaCipher(key, s)<<endl;
+        wstring g=skey.CoderAlphaCipher(key, s);
+        wcout<<skey.DecoderAlphaCipher(key,g)<<endl;
     } catch (const cipher_error & e) {
         cerr<<"Error: "<<e.what()<<endl;
     }
